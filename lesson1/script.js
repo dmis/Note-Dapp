@@ -37,7 +37,9 @@ provider.send("eth_requestAccounts", []).then(()=>{
     })
 })
 async function getNote(){
-    console.log(await contract.getNote())
+    let s = await contract.getNote()
+    console.log(s)
+    document.getElementById("inputNote").value = s
 }
 
 async function writeNote(){
